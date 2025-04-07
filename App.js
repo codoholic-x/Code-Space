@@ -2,38 +2,31 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-const heading = React.createElement(
-    "h1",
-
-    {
-        id: "tittle",
-        key: "h1"
-    },
-
-    "heading 1"
+const Title = () => (
+<h1 id="title" key="h2">
+    Hunting React
+</h1>
 );
 
-const heading2 = React.createElement(
-    "h2",
+// React component.
+// - Functional component -New -I'll use this of the time.
+// Name of component starts with capital letter - it's not mandatory.
 
-    {
-        id: "tittle",
-        key: "h2"
-    },
+const HeaderComponent = () => {
+return(
+    <div>
+        <Title />
+        <h1>Hunting React function Component</h1>
+        <h2>This is h2 tage</h2>
+    </div>
+  );
+};
 
-    "heading 2"
-);
+ 
 
-const container = React.createElement(
-    "div",
-    {
-        id: "container",
-    },
-
-    [heading, heading2]
-);
-
-console.log(heading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(container);
+//passing a react element inside the root.
+
+//async defer .
+root.render(<HeaderComponent />);
